@@ -16,6 +16,7 @@
 
         protected $_page = null;
 
+
         /**
          * BaseController constructor.
          */
@@ -35,12 +36,12 @@
                 case 'logout':
                     require_once 'Src/Controller/LogoutController.php';
                     new LogoutController();
-                    require_once 'Src/View/logout.html';
+                    require_once 'Src/View/logout.php';
                     break;
                 default:
                     require_once 'Src/Controller/LoginController.php';
                     new LoginController();
-                    require_once 'Src/View/login.html';
+                    require_once 'Src/View/login.php';
                     break;
             }
         }

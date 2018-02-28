@@ -8,7 +8,9 @@
 
     <h1>Logout</h1>
 
-    <a href="/">Login</a>
+    <p>Bonjour <?php echo $_SESSION['login'] ?></p>
+
+    <a href="/?deconnection">Me déconnecter</a>
 
 </body>
 </html>
