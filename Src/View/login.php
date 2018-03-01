@@ -1,12 +1,3 @@
-
-<?php
-
-var_dump( $_SESSION);
-
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -16,6 +7,12 @@ var_dump( $_SESSION);
 <body>
 
 <h1>Login</h1>
+<?php
+
+if (isset($_SESSION['message'])) {
+    echo '<p style="color:red">' . $_SESSION['message'] . '</p>';
+}
+?>
 <form action="/" method="post">
     <fieldset>
         <legend>Connection</legend>
@@ -27,12 +24,18 @@ var_dump( $_SESSION);
         <input type="password" name="passwd" id="psswd" placeholder="Votre mot de passe">
 
         <label for="remember">Se souvenir</label>
-        <input type="checkbox" checked name="remember" id="remember">
+        <input type="checkbox" name="remember" id="remember">
 
         <button type="submit">Valider</button>
 
 
     </fieldset>
 </form>
+
+<ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/?page=logout">Compte</a></li>
+
+</ul>
 </body>
 </html>
